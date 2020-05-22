@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="../css/battlefront.css">
+    <title>Battlefront</title>
+</head>
+<body>
+    <!--Audio-->
+    <audio preload="auto" id="musicLetsGo" class="son"><source src="../audio/letsGo.wav" type="audio/wav"></audio>
+    <audio preload="auto" id="startToPlay" class="son"><source src="../audio/startToPlay.wav" type="audio/wav"></audio>
+    <audio loop id="battleMusic" class="son"><source src="../audio/battleMusic.mp3" type="audio/mp3"></audio>
+    <audio preload="auto" id="attackPower" class="son"><source src="../audio/attackPower.wav" type="audio/wav"></audio>
+    <audio preload="auto" id="defendPower" class="son"><source src="../audio/defendPower.wav" type="audio/wav"></audio>
+    <audio preload="auto" id="victory" class="son"><source src="../audio/victory.mp3" type="audio/wav"></audio>
+    <audio preload="auto" id="takePower" class="son"><source src="../audio/takePower.wav" type="audio/wav"></audio>
+    <!-- <audio preload="auto" id="displacementMario" class="son"><source src="../audio/displacementMario.wav" type="audio/wav"></audio>
+    <audio preload="auto" id="displacementLuigi" class="son"><source src="../audio/displacementLuigi.wav" type="audio/wav"></audio> -->
+    <audio loop preload="auto" id="mainMusic" class="son"><source src="../audio/mainMusic.mp3" type="audio/mp3"></audio>
+    <img id="audio" src="../pictures/speaker.png" alt="audio">
+    <!--Container-->      
+    <div class="container">
+        <!--Sélection joueur 1-->      
+        <div>
+            <select id="select-player1" class="select-player">
+                <option value= "null"></option>
+                <option value="Mario">Mario</option>
+                <option value="Luigi">Luigi</option>
+            </select>
+        </div>
+        <!--Carte joueur 1-->
+            <div id="player1" class="player">
+                <p id="name-player1"></p>
+                <hr>
+                <div class="frame">
+                    <span class="overlap"><span id="life-player1">150</span>/150</span>
+                    <div id="bloc-player1"></div>
+                </div>
+                <div id="button-player1" class="button">
+                    <button id="attack-player1">Attack</button>
+                    <button id="defend-player1">Defend</button>
+                </div>
+                <hr>
+                <div class="power">
+                    <span class="text-power">Power: </span> 
+                    <span class="img-power"><img src="../pictures/PowerInitialPlayer.png" alt="Initial_power"/><span class="power-damage">(10) </span></span>
+                </div>
+            </div>
+        <!--Grille de jeu-->
+        <table class="grid-map">
+            <caption>Battlefront</caption>
+        </table>
+        <!--Carte joueur 2-->
+            <div id="player2" class="player">
+                <p id="name-player2"></p>
+                <hr>            
+                <div class="frame">
+                        <span class="overlap"><span id="life-player2">150</span>/150</span>
+                        <div id="bloc-player2"></div>
+                </div>
+                <div id="button-player2" class="button">
+                        <button id="attack-player2">Attack</button>
+                        <button id="defend-player2">Defend</button>
+                </div>
+                <hr>
+                <div class="power">
+                        <span class="text-power">Power: </span> 
+                        <span class="img-power"><img src="../pictures/PowerInitialPlayer.png" alt="Initial_power"/><span class="power-damage">(10) </span></span>
+                </div>
+            </div>
+        <!--Sélection joueur 2-->
+        <div>
+            <select id="select-player2" class="select-player">
+                <option value= "null"></option>
+                <option value="Mario">Mario</option>
+                <option value="Luigi">Luigi</option>
+            </select>
+        </div>
+    </div>
+    <!--Bouton début de la partie-->
+    <button class="button-start" disabled="disabled">START</button>
+    <!--Bouton recommencer de la partie-->    
+    <button class="button-restart">RESTART</button>
+
+
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.js"
+    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+    <script src="../js/creation&display.js"></script>
+    <script src="../js/movements.js"></script>
+    <script src="../js/powers.js"></script> 
+    <script src="../js/fight.js"></script>     
+    <script src="../js/battlefront.js"></script>
+</body>
+</html>

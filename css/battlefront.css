@@ -1,0 +1,130 @@
+@font-face {
+    font-family: 'Game';
+    src: url('../css/fonts/Silkscreen-fontfacekit/silkscreen_normal_macroman/slkscr-webfont.eot'),
+        url('../css/fonts/Silkscreen-fontfacekit/silkscreen_normal_macroman/slkscr-webfont.ttf'),
+        url('../css/fonts/Silkscreen-fontfacekit/silkscreen_normal_macroman/slkscr-webfont.woff');   
+
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Tahoma', sans-serif, sans-serif;
+}
+caption{
+    font-size: 30px;
+    font-family: 'Game', Tahoma, sans-serif, sans-serif;
+}
+#audio{
+    float:right;
+    padding-right: 3px;
+    margin-top: 3px;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.grid-map{
+    border-collapse: collapse; /*Supprime l'espace entre les différentes cellules de la grille*/
+    background-color: rgba(189, 195, 199, 0.4);
+}
+.box{
+    width: 70px;
+    height: 70px;
+    border: 2px solid rgba(189, 195, 199, 0.8);
+    text-align: center;
+}
+.player{
+    font-family: 'Game', Tahoma, sans-serif, sans-serif;
+    border: 1px solid black; /* :: Changement espace après modification de la bordure */
+    background-color: rgba(189, 195, 199, 0.4);
+    width: 152px;
+    height: 230px;
+    text-align: center;
+}
+#player1{
+    margin-right: 15px;    
+}
+#player2{
+    margin-left: 15px;
+}
+#name-player1, #name-player2{
+    margin: 0;
+    padding-bottom: 5px;
+}
+.frame{
+    width: 150px;
+    height: 10px;
+    border: 1px solid black;
+    position: relative;
+}
+#bloc-player1{
+    width: 150px; /* A Modifier lorsque le joueur subit des dégats */
+    height: 10px;
+    position: absolute;
+    z-index: 1;
+}
+#bloc-player2{
+    width: 150px; /* A Modifier lorsque le joueur subit des dégats */
+    height: 10px;
+    position: absolute;
+    z-index: 1;
+}
+#bloc-player1{
+    background-color: white;
+}
+#bloc-player2{
+    background-color: white;
+}
+#arrow-one{
+    position: absolute;
+    margin-top: 10%;
+    margin-left: 23%;
+    display: none;
+}
+#arrow-two{
+    position: absolute;
+    margin-top: 10%;
+    margin-left: 73.5%;
+    display: none;
+}
+.overlap{
+    position: absolute;
+    z-index: 2;
+    font-size: 10px;
+    transform: translate(-50%, 0%); /* Centrer l'élément en absolut */
+}
+.power{
+    text-align: left;
+    font-size: 15px;
+}
+.text-power{
+    position: absolute;
+    padding-top: 7px;
+}
+.power-damage{
+    position: absolute;
+    padding-top: 7px;
+    padding-left: 5px;
+}
+.img-power{
+    position: absolute;
+    margin-left: 60px; 
+    padding-top: 0px;
+}
+hr{
+    margin-bottom: 4px;
+}
+.button{
+    margin-top: 4px;
+    display: none; /* Faire apparaitre les boutons lorsqu'un combat commence */
+}
+.button-start{
+    display: block;
+    margin-left: 47%; /*Centrer le bouton*/
+}
+.button-restart{
+    display: none;
+    margin-top: 1%;
+    margin-left: 46%; /*Centrer le bouton*/
+}
